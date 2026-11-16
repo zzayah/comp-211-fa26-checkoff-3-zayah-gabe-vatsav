@@ -2,16 +2,25 @@
 
 int main()
 {
-    int burst[] = {24, 3, 3};
+    typedef struct
+    {
+        char name;
+        int burst;
+        int wait;
+    } Process;
+
+    Process p[] = {{'A', 24, 0}, {'B', 3, 24}, {'C', 3, 27}};
+
     int n = 3;
     int time = 0;
     int total = 0;
 
     for (int i = 0; i < n; i++)
     {
-        printf("P%d waits %2d, runs %2d -> %2d\n", i + 1, time, time, time + burst[i]);
-        total += time;
-        time += burst[i];
+        p[i].wait = time;
+        time += p[i].burst;
+        total += p[i].wait;
+        printf("%c waits %2d, finishes at %2d\n", p[i].name, p[i].wait, time);
     }
     printf("Average wait: %.2f\n", (double)total / n);
     return 0;
