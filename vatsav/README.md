@@ -4,14 +4,14 @@ XOR encryption is a simple encryption technique that uses the bitwise exclusive 
 
 ## C Example
 
-`xor.c` demonstrates XOR encryption and decryption using a C function called `xor_encrypt`. The function takes a message and an encryption key, then iterates through each character and XORs it with the key.
+`xor_encryption.c` demonstrates XOR encryption and decryption using a C function called `xor_encrypt`. The function takes a message and an encryption key, then iterates through each character and XORs it with the key.
 
 The main method demonstrates the process using the message `HELLO` and the key `42`. After encryption, the resulting bytes are printed in hexadecimal format. The same function is then called again with the same key to decrypt the message and recover the original text.
 
 Use standard gcc-compilation to compile the code:
 
 ```bash
-gcc xor.c -o xor
+gcc xor_encryption.c -o xor
 ./xor
 ```
 
