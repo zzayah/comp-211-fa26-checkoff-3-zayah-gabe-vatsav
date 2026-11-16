@@ -27,7 +27,7 @@ ABABABAB -> 1A1B1A1B1A1B1A1B
 
 RLE is exceptionally good at compressing long "runs" of the same value. With that said, it can make data larger when strings are not immediately consecutive, and struggles with patterns. Strings like `ABABAB` are often converted to longer strings with RLE, even while there are repeated characters.
 
-This program is just a small demonstration using letters; RLE can also be used with numbers, pixels, and other types of data. The program here simply prints encoded text rather than creating a compressed file or decoding it.
+This program is just a small demonstration using letters; RLE can also be used with numbers, pixels, and other types of data. The program here simply prints encoded text instead of going through a workflow that compresses a file.
 
 As for application, RLE is used in some image formats, including PDF and in medical imagery. It is particularly useful for simple graphics and black-and-white documents, where consecutive pixels often have identical values. I think this is a simple solution for compressing simple files!
 

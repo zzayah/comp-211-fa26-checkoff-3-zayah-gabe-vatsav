@@ -15,5 +15,6 @@ int main(void) {
     rle("AAAAAAAAAAAA");
     rle("ABCDEFGH");
     rle("ABABABAB");
+    rle("ABABAAAA");
     return 0;
 }
